@@ -9,14 +9,14 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="application-name" content="iWedding">
     <meta name="author" content="Biihappy.com">
-    <title>HỮU PHƯỚC &amp; NGỌC TRÂN Wedding site!</title>
-    <meta name="description" content="HỮU PHƯỚC &amp; NGỌC TRÂN - Our wedding date: 13-10-2024 | Tình yêu không có rào cản. Nó nhảy rào, nhảy rào, xuyên tường để đến đích với đầy hy vọng">
+    <title>Hữu Phước &amp; Ngọc Trân</title>
+    <meta name="description" content="Hữu Phước &amp; Ngọc Trân - Our wedding date: 13-10-2024 | Tình yêu không có rào cản. Nó nhảy rào, nhảy rào, xuyên tường để đến đích với đầy hy vọng">
     <meta name="keywords" content="Wedding, Wedding website, Website đám cưới, Tạo website đám cưới miễn phí">
-    <meta property="og:site_name" content="TRỊNH THẾ BẮC &amp; HOÀNG NGỌC TRÂN">
+    <meta property="og:site_name" content="Hữu Phước &amp; Ngọc Trân">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hữu Phước &amp; Ngọc Trân">
     <meta property="og:url" content="ngoctranmint.github.io">
-    <meta property="og:description" content="HỮU PHƯỚC &amp; NGỌC TRÂN - Our wedding date: 13-10-2024 | Tình yêu không có rào cản. Nó nhảy rào, nhảy rào, xuyên tường để đến đích với đầy hy vọng">
+    <meta property="og:description" content="Hữu Phước &amp; Ngọc Trân - Our wedding date: 13-10-2024 | Tình yêu không có rào cản. Nó nhảy rào, nhảy rào, xuyên tường để đến đích với đầy hy vọng">
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" type="image/x-icon" href="image/iStock-1038829490.jpg">
     <link rel="manifest" href="https://bac-quynh.iwedding.info/templates/template19/images/fav_touch_icons/manifest.json">
@@ -95,7 +95,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <div class="gallery-container gallery-fancybox masonry-gallery">
+                        <div class="gallery-container gallery-fancybox masonry-gallery" id="gallery-container">
                             <script type="text/javascript">
                                     photoGalleries.push({
                                         src : "image_ledinhhon/R__23014.jpg",
@@ -593,7 +593,132 @@
             </div>
         </section>
                 <!-- END GALLERY SECTION -->
-        
+                <script type="text/javascript">
+                    // Mảng chứa các đường dẫn ảnh
+                    const imagePaths = [
+                        "image_ledinhhon/R__24496.jpg",
+                        "image_ledinhhon/R__24515.jpg",
+                        "image_ledinhhon/R__24533.jpg",
+                        "image_ledinhhon/R__24539.jpg",
+                        "image_ledinhhon/R__24556.jpg",
+                        "image_ledinhhon/R__24573.jpg",
+                        "image_ledinhhon/R__24581.jpg",
+                        "image_ledinhhon/R__24604.jpg",
+                        "image_ledinhhon/R__24617.jpg",
+                        "image_ledinhhon/R__24621.jpg",
+                        "image_ledinhhon/R__24636.jpg",
+                        "image_ledinhhon/R__24642.jpg",
+                        "image_ledinhhon/R__24672.jpg",
+                        "image_ledinhhon/R__24675.jpg",
+                        "image_ledinhhon/R__24699.jpg",
+                        "image_ledinhhon/R__24705.jpg",
+                        "image_ledinhhon/R__24711.jpg",
+                        "image_ledinhhon/R__24728.jpg",
+                        "image_ledinhhon/R__24740.jpg",
+                        "image_ledinhhon/R__24747.jpg",
+                        "image_ledinhhon/R__24752.jpg",
+                        "image_ledinhhon/R__24759.jpg",
+                        "image_ledinhhon/R__24768.jpg",
+                        "image_ledinhhon/R__24793.jpg",
+                        "image_ledinhhon/R__24806.jpg",
+                        "image_ledinhhon/R__24815.jpg",
+                        "image_ledinhhon/R__24822.jpg",
+                        "image_ledinhhon/R__24829.jpg",
+                        "image_ledinhhon/R__24832.jpg",
+                        "image_ledinhhon/R__24836.jpg",
+                        "image_ledinhhon/R__24842.jpg",
+                        "image_ledinhhon/R__24849.jpg",
+                        "image_ledinhhon/R__24858.jpg",
+                        "image_ledinhhon/R__24874.jpg",
+                        "image_ledinhhon/R__24878.jpg",
+                        "image_ledinhhon/R__24882.jpg",
+                        "image_ledinhhon/R__24901.jpg",
+                        "image_ledinhhon/R__24937.jpg",
+                        "image_ledinhhon/R__24944.jpg",
+                        "image_ledinhhon/R__24955.jpg",
+                        "image_ledinhhon/R__24976.jpg",
+                        "image_ledinhhon/R__25002.jpg",
+                        "image_ledinhhon/R__25015.jpg",
+                        "image_ledinhhon/R__25041.jpg",
+                        "image_ledinhhon/R__25046.jpg",
+                        "image_ledinhhon/R__25051.jpg",
+                        "image_ledinhhon/R__25055.jpg",
+                        "image_ledinhhon/R__25064.jpg",
+                        "image_ledinhhon/R__25071.jpg",
+                        "image_ledinhhon/R__25076.jpg",
+                        "image_ledinhhon/R__25081.jpg",
+                        "image_ledinhhon/R__25085.jpg",
+                        "image_ledinhhon/R__25090.jpg",
+                        "image_ledinhhon/R__25094.jpg",
+                        "image_ledinhhon/R__25098.jpg",
+                        "image_ledinhhon/R__25100.jpg",
+                        "image_ledinhhon/R__25103.jpg",
+                        "image_ledinhhon/R__25104.jpg",
+                        "image_ledinhhon/R__25113.jpg",
+                        "image_ledinhhon/R__25117.jpg",
+                        "image_ledinhhon/R__25127.jpg",
+                        "image_ledinhhon/R__25133.jpg",
+                        "image_ledinhhon/R__25147.jpg",
+                        "image_ledinhhon/R__25153.jpg",
+                        "image_ledinhhon/R__25161.jpg",
+                        "image_ledinhhon/R__25180.jpg",
+                        "image_ledinhhon/R__25188.jpg",
+                        "image_ledinhhon/R__25201.jpg",
+                        "image_ledinhhon/R__25209.jpg",
+                        "image_ledinhhon/R__25219.jpg",
+                        "image_ledinhhon/R__25227.jpg",
+                        "image_ledinhhon/R__25233.jpg",
+                        "image_ledinhhon/R__25238.jpg",
+                        "image_ledinhhon/R__25243.jpg",
+                        "image_ledinhhon/R__25591.jpg",
+                        "image_ledinhhon/R__25596.jpg",
+                        "image_ledinhhon/R__25600.jpg",
+                        "image_ledinhhon/R__25604.jpg",
+                        "image_ledinhhon/R__25609.jpg",
+                        "image_ledinhhon/R__25694.jpg",
+                        "image_ledinhhon/R__25697.jpg",
+                        "image_ledinhhon/R__25703.jpg",
+                        "image_ledinhhon/R__25713.jpg",
+                        "image_ledinhhon/R__25721.jpg",
+                        "image_ledinhhon/R__25776.jpg",
+                        "image_ledinhhon/R__25779.jpg",
+                        "image_ledinhhon/R__25822.jpg",
+                        "image_ledinhhon/R__25840.jpg",
+                        "image_ledinhhon/R__25850.jpg",
+                        "image_ledinhhon/R__25853.jpg",
+                        "image_ledinhhon/R__25857.jpg",
+                        "image_ledinhhon/R__25864.jpg",
+                        "image_ledinhhon/R__25868.jpg"
+                    ];
+                
+                    // Lặp qua mảng ảnh và tạo phần tử HTML
+                    imagePaths.forEach((path, index) => {
+                        const galleryContainer = document.getElementById('gallery-container');
+                        
+                        // Tạo phần tử ảnh
+                        const galleryItem = document.createElement('div');
+                        galleryItem.classList.add('grid', 'grid-item', 'btn-see-more-gallery');
+                        galleryItem.setAttribute('data-index', index);
+                
+                        // Tạo phần tử img
+                        const imgElement = document.createElement('img');
+                        imgElement.src = path;
+                        imgElement.classList.add('img', 'img-responsive');
+                
+                        // Thêm img vào galleryItem
+                        galleryItem.appendChild(imgElement);
+                
+                        // Thêm galleryItem vào container
+                        galleryContainer.appendChild(galleryItem);
+                
+                        // Cập nhật mảng photoGalleries
+                        photoGalleries.push({
+                            src: path,
+                            thumb: path,
+                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                        });
+                    });
+                </script>
 
 
         
@@ -609,9 +734,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-logo" style="filter: invert(1); color:darksalmon;">
-                                HỮU PHƯỚC<br>
+                                Hữu Phước<br>
                                 <small>&</small><br>
-                                NGỌC TRÂN
+                                Ngọc Trân
                             </div>
                         </div>
                     </div>
