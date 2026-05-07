@@ -31,6 +31,7 @@
 <script type="text/javascript">
     var photoGalleries = [];
     var dataWishes = [];
+
     
 </script>
 <style>
@@ -122,6 +123,91 @@
         -moz-opacity: 0.5;
         opacity: .5;
     }
+
+    /* clock2 */
+    .wpo-wedding-date {
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .wpo-wedding-date #clock2 {
+    overflow: hidden;
+    text-align: center;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .wpo-wedding-date #clock2 > div {
+    width: 180px;
+    height: 163px;
+    background: url("images/clock-bg.png") center center/cover no-repeat local;
+    float: left;
+    display: table;
+    }
+    @media (max-width: 1200px) {
+    .wpo-wedding-date #clock2 > div {
+        width: 144px;
+        height: 140px;
+    }
+    }
+    @media (max-width: 991px) {
+    .wpo-wedding-date #clock2 > div {
+        /*width: 120px;*/
+        /*height: 110px;*/
+    }
+    }
+    @media (max-width: 767px) {
+    .wpo-wedding-date #clock2 > div {
+        margin: 10px;
+        padding-bottom: 15px;
+    }
+    .wpo-wedding-date #clock2 > div:last-child {
+        position: relative;
+        
+    }
+    }
+    .wpo-wedding-date #clock2 > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    }
+    .wpo-wedding-date #clock2 > div + div {
+    margin-left: 50px;
+    }
+    @media (max-width: 991px) {
+    .wpo-wedding-date #clock2 > div + div {
+        margin-left: 20px;
+    }
+    }
+    @media (max-width: 767px) {
+    .wpo-wedding-date #clock2 > div + div {
+        margin-left: 10px;
+    }
+    }
+    .wpo-wedding-date #clock2 .time {
+    font-family: "Futura PT";
+    font-size: 54px;
+    font-size: 3.6rem;
+    line-height: 1em;
+    padding-top: 15px;
+    color: #5880a2;
+    }
+    @media (max-width: 1200px) {
+    .wpo-wedding-date #clock2 .time {
+        font-size: 40px;
+        font-size: 2.6666666667rem;
+    }
+    }
+    @media (max-width: 991px) {
+    .wpo-wedding-date #clock2 .time {
+        font-size: 30px;
+        font-size: 2rem;
+    }
+    }
+    .wpo-wedding-date #clock2 span {
+    color: #365872;
+    }
+    /* clock2 */
+
 </style>
 <body>
 
@@ -279,14 +365,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
+                        Đếm ngày yêu nhau 
                         <div class="clock-grids">
-                            <div id="clock1" data-date="2024-12-22" data-text-day="Ngày" data-text-hour="Giờ" data-text-minute="Phút" data-text-second="Giây"></div>
+                            <div id="clock1" data-date="2021-12-24" data-text-day="Ngày" data-text-hour="Giờ" data-text-minute="Phút" data-text-second="Giây"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+        <section class="wpo-wedding-date section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        Đếm ngày đã cưới
+                        <div class="clock-grids">
+                            <div id="clock2" data-date="2024-12-22" data-text-day="Ngày" data-text-hour="Giờ" data-text-minute="Phút" data-text-second="Giây"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="couple-section section-padding" >
         	<div class="_anchor" id="couple"></div>
             <div class="container">
@@ -295,10 +393,10 @@
                         <div class="couple-area clearfix">
                             <div class="text-grid bride">
                                 <div class="couple-img">
-                                    <img src="images/MRHP8043.jpg" alt="">
+                                    <img src="images/MRHP8043_cut.jpg" alt="">
                                 </div>
                                 <h3 class="font-family-title2">Lê Hữu Phước</h3>
-                                <p>Là một chàng trai sinh ra và lớn lên tại Tây Ninh - một người tuy ít nói nhưng lại thích giao lưu với đồng nghiệp và mọi người xung quanh. </p>
+                                <p>Đến từ Tây Ninh</p>
                                 <div class="social">
                                     <ul>
                                         
@@ -313,11 +411,11 @@
                             </div>
                             <div class="text-grid groom">
                                 <div class="couple-img">
-                                    <img src="images/MRHP7454.jpg" alt="">
+                                    <img src="images/MRHP7454_cut.jpg" alt="">
                                 </div>
                                 <h3 class="font-family-title2" >Nguyễn Hoàng Ngọc Trân</h3>
                                                                 
-                                <p>Là một cô gái cũng đến từ Tây Ninh - một cô gái luôn vui vẻ, có sở thích đi du lịch và coi phim, đặc biệt là phim Conan.</p>
+                                <p>Đến từ Tây Ninh</p>
                                 <div class="social">
                                     <ul>
                                         
@@ -330,6 +428,8 @@
                 </div>
             </div>
         </section>
+
+
 
                 <section class="website_info">
         	<div class="row button-accessibilities animate-box" data-animate-effect="fadeInUp">
@@ -352,462 +452,478 @@
         </section>
                 
         
-                <section class="wpo-portfolio-section section-padding" >
-        	<div class="_anchor" id="gallery"></div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="wpo-section-title-s2">
-                        <div class="section-title-simg">
-                            <img src="images/section-title2.png" alt="">
-                        </div>
-                        <h2>Album Hình Cưới</h2>
-                        <div class="section-title-img">
-                            <div class="round-ball"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sortable-gallery container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="portfolio-grids gallery-container clearfix">
-                                                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7752.jpg",
-                                            thumb: "images/MRHP7752.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="0">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7752.jpg" alt class="img img-responsive">
-                                            </a>
+        <section class="wpo-portfolio-section section-padding" >
+                                <div class="_anchor" id="gallery"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="wpo-section-title-s2">
+                                            <div class="section-title-simg">
+                                                <img src="images/section-title2.png" alt="">
+                                            </div>
+                                            <h2>Album Hình Cưới</h2>
+                                            <div class="section-title-img">
+                                                <div class="round-ball"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7486.jpg",
-                                            thumb: "images/MRHP7486.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="1">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7486.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7501.jpg",
-                                            thumb: "images/MRHP7501.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="2">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7501.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7535.jpg",
-                                            thumb: "images/MRHP7535.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="3">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7535.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7572.jpg",
-                                            thumb: "images/MRHP7572.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="4">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7572.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7643.jpg",
-                                            thumb: "images/MRHP7643.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="5">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7643.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7673.jpg",
-                                            thumb: "images/MRHP7673.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="6">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7673.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7890.jpg",
-                                            thumb: "images/MRHP7890.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="7">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7890.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                                                                                        <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7956.jpg",
-                                            thumb: "images/MRHP7956.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    
-                                                                        <div class="grid grid-item btn-see-more-gallery" data-index="8">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7956.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP7981.jpg",
-                                            thumb: "images/MRHP7981.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="9">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP7981.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8004.jpg",
-                                            thumb: "images/MRHP8004.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="10">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8004.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8060.jpg",
-                                            thumb: "images/MRHP8060.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="11">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8060.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8076.jpg",
-                                            thumb: "images/MRHP8076.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="12">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8076.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8094.jpg",
-                                            thumb: "images/MRHP8094.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="13">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8094.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8105.jpg",
-                                            thumb: "images/MRHP8105.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="14">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8105.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8133.jpg",
-                                            thumb: "images/MRHP8133.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="15">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8133.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8137.jpg",
-                                            thumb: "images/MRHP8137.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="16">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8137.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8255.jpg",
-                                            thumb: "images/MRHP8255.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="17">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8255.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8292.jpg",
-                                            thumb: "images/MRHP8292.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="18">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8292.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8324.jpg",
-                                            thumb: "images/MRHP8324.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="19">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8324.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8335.jpg",
-                                            thumb: "images/MRHP8335.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="20">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8335.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8343.jpg",
-                                            thumb: "images/MRHP8343.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="21">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8343.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8368.jpg",
-                                            thumb: "images/MRHP8368.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="22">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8368.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8392.jpg",
-                                            thumb: "images/MRHP8392.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="23">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8392.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8407.jpg",
-                                            thumb: "images/MRHP8407.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="24">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8407.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8433.jpg",
-                                            thumb: "images/MRHP8433.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="25">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8433.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8461.jpg",
-                                            thumb: "images/MRHP8461.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="26">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8461.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8474.jpg",
-                                            thumb: "images/MRHP8474.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="27">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8474.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/MRHP8439.jpg",
-                                            thumb: "images/MRHP8439.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="28">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/MRHP8439.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript">
-                                        photoGalleries.push({
-                                            src : "images/iStock-1038829490.jpg",
-                                            thumb: "images/iStock-1038829490.jpg",
-                                            subHtml: `<div class="lg-sub-html"><h4></h4></div>`
-                                        });
-                                    </script>
-                                    <div class="grid grid-item btn-see-more-gallery" data-index="13">
-                                        <div class="img-holder">
-                                            <a href="javascript:void(0)">
-                                                <img src="images/iStock-1038829490.jpg" alt class="img img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <div class="sortable-gallery container">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="portfolio-grids gallery-container clearfix">
+                                                        <script type="text/javascript">
+                                                                photoGalleries.push({
+                                                                    src : "images/MRHP7459.jpg",
+                                                                    thumb: "images/MRHP7459.jpg",
+                                                                    subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                                });
+                                                            </script>
+                                                            
+                                                                                                <div class="grid grid-item btn-see-more-gallery" data-index="0">
+                                                                <div class="img-holder">
+                                                                    <a href="javascript:void(0)">
+                                                                        <img src="images/MRHP7459.jpg" alt class="img img-responsive">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7752.jpg",
+                                                                thumb: "images/MRHP7752.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="0">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7752.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7486.jpg",
+                                                                thumb: "images/MRHP7486.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="1">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7486.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7501.jpg",
+                                                                thumb: "images/MRHP7501.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="2">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7501.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7535.jpg",
+                                                                thumb: "images/MRHP7535.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="3">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7535.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7572.jpg",
+                                                                thumb: "images/MRHP7572.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="4">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7572.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7643.jpg",
+                                                                thumb: "images/MRHP7643.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="5">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7643.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7673.jpg",
+                                                                thumb: "images/MRHP7673.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="6">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7673.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7890.jpg",
+                                                                thumb: "images/MRHP7890.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="7">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7890.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                                                                                            <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7956.jpg",
+                                                                thumb: "images/MRHP7956.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        
+                                                                                            <div class="grid grid-item btn-see-more-gallery" data-index="8">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7956.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP7981.jpg",
+                                                                thumb: "images/MRHP7981.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="9">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP7981.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8004.jpg",
+                                                                thumb: "images/MRHP8004.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="10">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8004.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8060.jpg",
+                                                                thumb: "images/MRHP8060.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="11">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8060.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8076.jpg",
+                                                                thumb: "images/MRHP8076.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="12">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8076.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8094.jpg",
+                                                                thumb: "images/MRHP8094.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="13">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8094.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8105.jpg",
+                                                                thumb: "images/MRHP8105.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="14">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8105.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8133.jpg",
+                                                                thumb: "images/MRHP8133.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="15">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8133.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8137.jpg",
+                                                                thumb: "images/MRHP8137.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="16">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8137.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8255.jpg",
+                                                                thumb: "images/MRHP8255.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="17">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8255.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8292.jpg",
+                                                                thumb: "images/MRHP8292.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="18">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8292.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8324.jpg",
+                                                                thumb: "images/MRHP8324.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="19">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8324.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8335.jpg",
+                                                                thumb: "images/MRHP8335.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="20">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8335.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8343.jpg",
+                                                                thumb: "images/MRHP8343.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="21">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8343.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8368.jpg",
+                                                                thumb: "images/MRHP8368.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="22">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8368.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8392.jpg",
+                                                                thumb: "images/MRHP8392.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="23">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8392.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8407.jpg",
+                                                                thumb: "images/MRHP8407.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="24">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8407.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8433.jpg",
+                                                                thumb: "images/MRHP8433.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="25">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8433.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8461.jpg",
+                                                                thumb: "images/MRHP8461.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="26">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8461.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8474.jpg",
+                                                                thumb: "images/MRHP8474.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="27">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8474.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/MRHP8439.jpg",
+                                                                thumb: "images/MRHP8439.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="28">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/MRHP8439.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            photoGalleries.push({
+                                                                src : "images/iStock-1038829490.jpg",
+                                                                thumb: "images/iStock-1038829490.jpg",
+                                                                subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                                            });
+                                                        </script>
+                                                        <div class="grid grid-item btn-see-more-gallery" data-index="13">
+                                                            <div class="img-holder">
+                                                                <a href="javascript:void(0)">
+                                                                    <img src="images/iStock-1038829490.jpg" alt class="img img-responsive">
+                                                                </a>
+                                                            </div>
+                                                        </div>
 
-                            </div>
-                        </div>
-                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     </div>
-            </div>
-        </section>
-        
+            
+                                    
+                                </div>
+                </section>
                 
                 <section class="wpo-event-section section-padding" >
         	<div class="_anchor" id="event"></div>
@@ -838,7 +954,7 @@
                                             <span>Tư gia nhà gái - </span>
                                             KP. Long Kim, phường Long Thành Trung, Thị xã Hòa Thành, tỉnh Tây Ninh
                                             </li>
-	                                        <li> <a  href="ledinhhon.html" target="_blank">Lễ Đính Hôn</a></li>
+	                                        <li> <a  href="ledinhhon.html" target="_blank">Album ngày Lễ Đính Hôn</a></li>
 	                                        <li>
                                                 <div class="calendar-button">
                                                     <div class="atcb" style="display:none;">
@@ -850,11 +966,9 @@
                                                     "startTime":"09:00",
                                                     "endTime":"12:00",
                                                     "location":"KP. Long Kim, phường Long Thành Trung, Thị xã Hòa Thành, tỉnh Tây Ninh",
-                                                    "options":["Apple","Google","iCal","Microsoft365","MicrosoftTeams","Outlook.com","Yahoo"],
                                                     "timeZone":"Asia/Ho_Chi_Minh",
                                                     "iCalFileName":"Reminder-Event",
                                                     "listStyle":"modal",
-                                                    "label":"Thêm vào lịch",
                                                     "trigger":"click"
                                                     }
                                                     </div>
@@ -895,11 +1009,9 @@
                                                     "startTime":"10:30",
                                                     "endTime":"10:30",
                                                     "location":"KP. Long Kim, phường Long Thành Trung, Thị xã Hòa Thành, tỉnh Tây Ninh",
-                                                    "options":["Apple","Google","iCal","Microsoft365","MicrosoftTeams","Outlook.com","Yahoo"],
                                                     "timeZone":"Asia/Ho_Chi_Minh",
                                                     "iCalFileName":"Reminder-Event",
                                                     "listStyle":"modal",
-                                                    "label":"Thêm vào lịch",
                                                     "trigger":"click"
                                                     }
                                                     </div>
@@ -940,11 +1052,9 @@
                                                     "startTime":"11:00",
                                                     "endTime":"11:00",
                                                     "location":"KP. Hiệp Định, phường Hiệp Tân, Thị xã Hòa Thành, tỉnh Tây Ninh",
-                                                    "options":["Apple","Google","iCal","Microsoft365","MicrosoftTeams","Outlook.com","Yahoo"],
                                                     "timeZone":"Asia/Ho_Chi_Minh",
                                                     "iCalFileName":"Reminder-Event",
                                                     "listStyle":"modal",
-                                                    "label":"Thêm vào lịch",
                                                     "trigger":"click"
                                                     }
                                                     </div>
@@ -1062,15 +1172,13 @@
                                     </div>
                                     <div class="clearfix error-handling-messages">
                                         <div id="success">Thank you</div>
-                                        <div id="error"> Error occurred while sending email. Please try again later.
-                                        </div>
                                     </div>
                                 </form>
                                 <div class="border-style"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 col-md-12 ">
+                    <!-- <div class="col-12 col-lg-6 col-md-12 ">
                         <div class="wpo-contact-section-wrapper py-1">
                             <div class="wpo-contact-form-area p-0 wish-box">
                                                                 <div class="wish-box-item ">
@@ -1085,7 +1193,7 @@
                                                                     </div>
                                                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
@@ -1107,15 +1215,18 @@
                 </div>
                 <div class="donate-modal-body">
                     <div class="donate-box">
-                                                                        <div class="donate-card">
-                            <h3>Mừng cưới đến cô dâu</h3>
-                            	                    	<img class="qr-code-image" src="images/09ff53764895fbcba284.jpg">
-	                    	                            <p>Ngân hàng: <strong>BVBank - Ngân hàng TMCP Bản Việt</strong></p>
+                        <div class="donate-card" style="width: calc(70% - 50px);padding: 15px;">
+                            <h3>Mừng cưới đến cô dâu</h3>	
+	                    	<p>Ngân hàng: <strong>BVBank - Ngân hàng TMCP Bản Việt</strong></p>
                             <p>Tên tài khoản: <strong>NGUYEN HOANG NGOC TRAN</strong></p>
                             <p>Số tài khoản: <strong>9017041009804 hoặc 0765716380</strong></p>
-                            
-                                                    </div>
-                                            </div>
+                             
+                            <h3>Mừng cưới đến chú rể</h3>	
+	                    	<p>Ngân hàng: <strong>VietinBank - Ngân hàng TMCP Công Thương Việt Nam</strong></p>
+                            <p>Tên tài khoản: <strong>LE HUU PHUOC</strong></p>
+                            <p>Số tài khoản: <strong>105870376257</strong></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1205,8 +1316,10 @@
             });
             return parsed;
         }
-        <!-- let biicore = parseJsonRecursively('{"template_id":"62ef3cdcf106ea77bb276cc5","templatePremium":false,"themeRoot":"https:\/\/hieungoc1705.iwedding.info\/templates\/template17","webroot":"https:\/\/hieungoc1705.iwedding.info","coreSite":"https:\/\/biihappy.com","webToken":"67fbbc9eb73e55a7260c31e5","isPremium":true,"bgMusic":"https:\/\/cdn.biihappy.com\/ziiweb\/wedding-musics\/MotNha-DaLAB.mp3","alert":"[]","effect":"{\\\"type\\\":\\\"heart\\\"}","logo":"https:\/\/iwedding.info\/common\/imgs\/bii.png?v=20210131","url_landing_page":"https:\/\/biihappy.com\/iwedding","isAutoPlay":true,"footer_title":"iWedding | N\u1ec1n t\u1ea3ng t\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed t\u1eeb Biihappy","footer_title_mobile":"T\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed"}'); -->
-    </script>
+        // let biicore = parseJsonRecursively('{"template_id":"62ef3cdcf106ea77bb276cc5","templatePremium":false,"themeRoot":"https:\/\/hieungoc1705.iwedding.info\/templates\/template17","webroot":"https:\/\/hieungoc1705.iwedding.info","coreSite":"https:\/\/biihappy.com","webToken":"67fbbc9eb73e55a7260c31e5","isPremium":true,"bgMusic":"https:\/\/audio.com\/quentin-francois-edifio\/audio\/cascada-everytime-we-touch-official-video","alert":"[]","effect":"{\\\"type\\\":\\\"heart\\\"}","logo":"https:\/\/iwedding.info\/common\/imgs\/bii.png?v=20210131","url_landing_page":"https:\/\/biihappy.com\/iwedding","isAutoPlay":true,"footer_title":"iWedding | N\u1ec1n t\u1ea3ng t\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed t\u1eeb Biihappy","footer_title_mobile":"T\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed"}');
+        let biicore = parseJsonRecursively('{"template_id":"62ef3cdcf106ea77bb276cc5","templatePremium":false,"themeRoot":"https:\/\/hieungoc1705.iwedding.info\/templates\/template17","webroot":"https:\/\/hieungoc1705.iwedding.info","coreSite":"https:\/\/biihappy.com","webToken":"67fbbc9eb73e55a7260c31e5","isPremium":true,"alert":"[]","effect":"{\\\"type\\\":\\\"heart\\\"}","logo":"https:\/\/iwedding.info\/common\/imgs\/bii.png?v=20210131","url_landing_page":"https:\/\/biihappy.com\/iwedding","isAutoPlay":true,"footer_title":"iWedding | N\u1ec1n t\u1ea3ng t\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed t\u1eeb Biihappy","footer_title_mobile":"T\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed"}');
+   
+   </script>
     <script src="https://hieungoc1705.iwedding.info/templates/template17/js/jquery-plugin-collection.js?v=20250312"></script>
     <script src="https://hieungoc1705.iwedding.info/common/calendar.js?v=20250312"></script>
     <script src="https://hieungoc1705.iwedding.info/templates/template17/js/script.js?v=20250312"></script>
@@ -1218,6 +1331,53 @@
         if (typeof  toastMessageWishes === 'function') {
             toastMessageWishes(dataWishes,'rsvp');
         }
+
+        // clock2
+    if ($("#clock2").length) {
+        function timeElapse(date){
+            var current = Date();
+            var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+            var days = Math.floor(seconds / (3600 * 24));
+            if (days < 10) {
+                days = "0" + days;
+            }
+            seconds = seconds % (3600 * 24);
+            var hours = Math.floor(seconds / 3600);
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            seconds = seconds % 3600;
+            var minutes = Math.floor(seconds / 60);
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            seconds = seconds % 60;
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            var html = '<div class="box"><div><div class="time">' + days + '</div> <span>'+ $('#clock2').data('text-day') +'</span> </div></div><div class="box"><div><div class="time">' + hours + '</div> <span>'+ $('#clock2').data('text-hour') +'</span> </div></div><div class="box"><div><div class="time">' + minutes + '</div> <span>'+ $('#clock2').data('text-minute') +'</span> </div></div><div class="box"><div><div class="time">' + seconds + '</div> <span>'+ $('#clock2').data('text-second') +'</span> </div></div>';
+            $('#clock2').html(html);
+        }
+        var time = $('#clock2').data('date');
+        $('#clock2').countdown(time.replace(/-/g,'/'), function(event) {
+            if(event.type == 'stoped'){
+                var together = new Date($('#clock2').data('date'));           
+                together.setHours(0);                           
+                together.setMinutes(0);             
+                together.setSeconds(0);                 
+                together.setMilliseconds(0);
+                setInterval(function() {
+                    timeElapse(together);
+                }, 1000);
+            }else{
+                var $this = $(this).html(event.strftime(''
+                + '<div class="box"><div><div class="time">%D</div> <span>'+ $('#clock2').data('text-day') +'</span> </div></div>'
+                + '<div class="box"><div><div class="time">%H</div> <span>'+ $('#clock2').data('text-hour') +'</span> </div></div>'
+                + '<div class="box"><div><div class="time">%M</div> <span>'+ $('#clock2').data('text-minute') +'</span> </div></div>'
+                + '<div class="box"><div><div class="time">%S</div> <span>'+ $('#clock2').data('text-second') +'</span> </div></div>'));
+            }
+        });
+    }
     </script>
 </body>
 
