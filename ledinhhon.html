@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="gallery-container gallery-fancybox masonry-gallery" id="gallery-container">
-                            <script type="text/javascript">
+                            <!-- <script type="text/javascript">
                                     photoGalleries.push({
                                         src : "images_ledinhhon/R__23014.jpg",
                                         thumb: "images_ledinhhon/R__23014.jpg",
@@ -114,7 +114,7 @@
                                         thumb: "images_ledinhhon/R__23017.jpg",
                                         subHtml: `<div class="lg-sub-html"><h4></h4></div>`
                                     });
-                                </script>
+                                </script> -->
                                 
                                 <!-- <div class="grid grid-item btn-see-more-gallery" data-index="1">
                                     <img src="images_ledinhhon/R__23017.jpg" alt class="img img-responsive">
@@ -721,7 +721,7 @@
                         });
                     });
                 </script> -->
-                <script>
+                <!-- <script>
                     const galleryContainer = document.getElementById('gallery-container');
 
                     // khoảng số muốn quét
@@ -764,8 +764,68 @@
                         // bắt đầu check
                         testImage.src = path;
                     }
-                </script>
+                </script> -->
+                <script>
+                    const galleryContainer = document.getElementById('gallery-container');
 
+                    const start = 23010;
+                    const end = 25895;
+
+                    const validImages = [];
+
+                    let checked = 0;
+                    const total = end - start + 1;
+
+                    for (let i = start; i <= end; i++) {
+
+                        const path = `images_ledinhhon/R__${i}.jpg`;
+                        const img = new Image();
+
+                        img.onload = function () {
+                            validImages.push({
+                                index: i,
+                                path: path
+                            });
+
+                            finishCheck();
+                        };
+
+                        img.onerror = function () {
+                            finishCheck();
+                        };
+
+                        img.src = path;
+                    }
+
+                    function finishCheck() {
+                        checked++;
+
+                        if (checked === total) {
+                            // sắp xếp đúng thứ tự tăng dần
+                            validImages.sort((a, b) => a.index - b.index);
+
+                            // render
+                            validImages.forEach(img => {
+
+                                const galleryItem = document.createElement('div');
+                                galleryItem.classList.add('grid', 'grid-item', 'btn-see-more-gallery');
+
+                                const imgElement = document.createElement('img');
+                                imgElement.src = img.path;
+                                imgElement.classList.add('img', 'img-responsive');
+
+                                galleryItem.appendChild(imgElement);
+                                galleryContainer.appendChild(galleryItem);
+
+                                photoGalleries.push({
+                                    src: img.path,
+                                    thumb: img.path,
+                                    subHtml: `<div class="lg-sub-html"><h4></h4></div>`
+                                });
+                            });
+                        }
+                    }
+                </script>
         
         
         <div style="text-align: center;">
